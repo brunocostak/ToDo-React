@@ -56,9 +56,9 @@ export default function Todo() {
     <form onSubmit={handleSubmit}>
       <div className="flex flex-col gap-2 bg-[#25273c]">
         <div className="flex gap-1 p-4 bg-[#25273c] w-5/6 md:w-2/6 lg:w-1/2 rounded-md absolute top-32 left-0 right-0 mx-auto">
-          <div className="flex items-center">
+          <div className="flex items-center w-3/4">
             <input
-              className="border-none bg-[#25273c] text-white focus:outline-0 w-10/12"
+              className="border-none bg-[#25273c] text-white focus:outline-0 w-10/12 md:w-10/12 lg::w-10/12"
               type="text"
               max={25}
               value={todo}
