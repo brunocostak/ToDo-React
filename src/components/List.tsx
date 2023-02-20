@@ -33,6 +33,16 @@ export default function List({
     localStorage.setItem("todoList", JSON.stringify(todos));
   };
   const handleEdit = () => {
+    if (editTask.length > 30) {
+      return;
+    }
+    if (list.some((item) => item.task === todo)) {
+      alert("Já existe uma tarefa com esse nome");
+      return;
+    }
+    if (editTask.length === 0) {
+      return;
+    }
     const todos = JSON.parse(localStorage.getItem("todoList") || "[]");
     // Encontra o índice do objeto que deseja atualizar (por exemplo, o objeto com task "Comprar pão")
     const index = todos.findIndex((todos: any) => todos.task === todo);
